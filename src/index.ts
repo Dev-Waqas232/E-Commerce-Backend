@@ -12,7 +12,9 @@ async function bootstrap() {
 
   app.use("/graphql", expressMiddleware(server));
 
-  app.listen(4000, () => {
+  const PORT = process.env.PORT || 8080;
+
+  app.listen(PORT, () => {
     console.log("Express Server is running");
   });
 }

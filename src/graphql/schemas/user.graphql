@@ -8,5 +8,14 @@ type Mutation {
 
 type User {
   id: ID!
-  name: String!
+  firstName: String!
+  lastName: String!
+  email: String!
+  role: Role!
+}
+
+enum Role {
+  admin
+  instructor
+  student
 }
